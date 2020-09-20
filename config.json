@@ -1,27 +1,51 @@
 {
-    "inbounds": 
+
+    “入站”： 
+
     [
+
         {
-            "port": 3000,"protocol": "vless",
-            "settings": {"clients": [{"id": "8f91b6a0-e8ee-11ea-adc1-0242ac120002"}],"decryption": "none"},
-            "streamSettings": {"network": "ws","wsSettings": {"path": "/"}}
+
+            “ port”：3000，“ protocol”：“ vless”，
+
+            “ settings”：{“ clients”：[{“ id”：“ 83c0d587-28f1-4977-8235-aaae808b3f1b”}]，“ decryption”：“ none”}，
+
+            “ streamSettings”：{“ network”：“ ws”，“ wsSettings”：{“ path”：“ / vless”}}
+
         }
-    ],
-	
-    "outbounds": 
+
+    ]，
+
+	    “出站”： 
+
     [
-        {"protocol": "freedom","tag": "direct","settings": {}},
-        {"protocol": "socks","tag": "sockstor","settings": {"servers": [{"address": "127.0.0.1","port": 9050}]}},
-        {"protocol": "blackhole","tag": "blocked","settings": {}}
-    ],
+
+        {“协议”：“自由”，“标签”：“直接”，“设置”：{}}，
+
+        {“ protocol”：“ socks”，“ tag”：“ sockstor”，“ settings”：{“ servers”：[{“ address”：“ 127.0.0.1”，“ port”：9050}]}}}，
+
+        {“协议”：“黑洞”，“标签”：“被阻止”，“设置”：{}}
+
+    ]，
+
 	
-    "routing": 
+
+    “路由”： 
+
     {
-        "rules": 
+
+        “规则”： 
+
         [
-		{"type": "field","outboundTag": "blocked","ip": ["geoip:private","geoip:cn"]},
-		{"type": "field","outboundTag": "blocked","domain": ["geosite:private","geosite:cn","geosite:category-ads-all"]},
-		{"type": "field","outboundTag": "sockstor","domain": ["geosite:tor"]}
+
+		{“ type”：“ field”，“ outboundTag”：“ blocked”，“ ip”：[“ geoip：private”，“ geoip：cn”]}，
+
+		{“ type”：“ field”，“ outboundTag”：“ blocked”，“ domain”：[“ geosite：private”，“ geosite：cn”，“ geosite：category-ads-all”]}，
+
+		{“ type”：“ field”，“ outboundTag”：“ sockstor”，“ domain”：[“ geosite：tor”]}
+
         ]
+
     }
+
 }
